@@ -1,0 +1,137 @@
+:root{
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+
+/* ### Neutral */
+
+    --Very-dark-blue-main: hsl(217, 54%, 11%);
+    --Very-dark-blue-card: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Very-dark-blue-main);
+}
+
+main{
+    width: 90%;
+    max-width: 21rem;
+    padding: 1.5rem;
+    background-color: var(--Very-dark-blue-card);
+    border-radius: 1rem;
+}
+
+.main__container{
+    width:100% ;
+    cursor: pointer;
+    position: relative;
+}
+
+.container__img{
+    background: url(images/image-equilibrium.jpg) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 15rem;
+    border-radius: .6rem;
+}
+
+.main__container:hover::before{
+    content: url(images/icon-view.svg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    z-index: 1;
+} 
+
+.container__img:hover{
+    background-color: hsla(178, 100%, 50%, 0.343);
+    background-blend-mode: overlay;
+}
+
+.main__titulo{
+    color: var(--White);
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    cursor: pointer;
+}
+
+.main__titulo:hover{
+    color: var(--Cyan);
+}
+
+
+.main__parrafo{
+    color: var(--Soft-blue);
+    font-weight:300 ;
+    font-size: 1.1rem;
+}
+
+.main__info{
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info__ethereum{
+    color: var(--Cyan);
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.info__ethereum img{
+    vertical-align: middle;
+    margin-right: .2rem;
+}
+
+.info__reloj{
+    color: var(--Soft-blue);
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.info__reloj img{
+    vertical-align: middle;
+    width: 1.2rem;
+}
+
+.main__perfil{
+    border-top: .5px solid var(--Very-dark-blue-line);
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+
+}
+
+.main__perfil img{
+    width: 2.3rem;
+    border-radius: 50%;
+    border: 1px solid var(--White);
+}
+
+.perfil__nombre{
+    margin-left: 1rem;
+    color: var(--Soft-blue);
+    vertical-align: middle  ;
+
+}
+
+.perfil__nombre span{
+    color: var(--White);
+    cursor: pointer;
+}
+
+.perfil__nombre span:hover{
+    color: var(--Cyan);
+}
